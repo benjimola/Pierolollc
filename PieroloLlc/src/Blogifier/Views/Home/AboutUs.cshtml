@@ -1,0 +1,18 @@
+@using Blogifier.Shared
+
+@{
+    ViewData["Title"] = "About Us";
+    Layout = "~/Views/Shared/_About.cshtml";
+}
+
+<partial name="/Views/Shared/_aboutInnerBanner.cshtml"/>
+<partial name="/Views/Shared/Components/About/AboutUsContentComponent.cshtml" />
+<partial name="/Views/Shared/Components/About/QualitiesComponent.cshtml" />
+<partial name="/Views/Shared/Components/About/AboutDetailsComponent.cshtml" />
+
+<style>
+    section {
+        padding: 100px 0px;
+        margin: 0px;
+    }
+</style>

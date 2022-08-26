@@ -1,0 +1,56 @@
+@using Blogifier.Shared
+@{
+    Layout = "layouts/_main.cshtml";
+}
+@*<partial name="components/SliderComponent.cshtml" />
+<partial name="components/AboutComponent.cshtml" />
+<partial name="components/ServiceComponent.cshtml" />
+<partial name="components/BlogComponent.cshtml" />*@
+
+
+   @*<partial name="post/featured.cshtml" /> *@
+
+    
+    @*
+        TODO:
+        Custom fields:
+        - Post list style options:
+            1. view-grid (default)
+            2. view-list
+    *@
+<partial name="components/BlogInnerBannerComponent.cshtml"/>
+<partial name="post/view-grid.cshtml" /> 
+     @*<partial name="post/view-list.cshtml" /> *@
+
+    <partial name="components/pagination.cshtml" />
+
+@*<style>
+    .owl-main .item::after {
+        content: '';
+        background: -moz-linear-gradient(top, rgba(12, 11, 54, 0.5) 0%, rgba(12, 11, 54, 0.5) 100%);
+        background: -webkit-linear-gradient(top, rrgba(12, 11, 54, 0.5) 0%,rgba(12, 11, 54, 0.5) 100%);
+        background: linear-gradient(to bottom, rgba(12, 11, 54, 0.5) 0%,rgba(12, 11, 54, 0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff6205', endColorstr='#804b55dc',GradientType=0 );
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+    }
+
+    .owl-main .caption .display {
+        font-size: 55px;
+        line-height: 55px;
+        margin: 10px 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+
+*@
+
+<style>
+    section {
+        padding: 100px 0px;
+        margin: 0px;
+    }
+</style>

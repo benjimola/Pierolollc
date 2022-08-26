@@ -1,0 +1,64 @@
+
+<header class="header index-2">
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+
+            <!-- Brand -->
+            <h2 class="nav-brand">
+                <a class="navbar-brand" href="" title="PIEROLO LIMITED"><img style="height:54px" src="~/img/logo.png" alt="Pierolo"></a>
+            </h2>
+
+            <div class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </div>
+
+            <!-- Links -->
+            <div class="main-menu navbar-collapse collapse" id="nav-content" style="">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="IndexView" asp-controller="Home" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Services">Services</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Index" asp-controller="Home">Blogs</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="dropdown" href="#">Store</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="AboutUs" asp-controller="Home">About Us</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<style>
+    .navbar-toggler {
+        padding: 3px 7px;
+        line-height: 1;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
+</style>

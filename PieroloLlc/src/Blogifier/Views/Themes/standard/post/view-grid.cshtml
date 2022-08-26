@@ -1,0 +1,55 @@
+@using Blogifier.Shared.Resources
+@using Blogifier.Shared
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Resource> _localizer
+
+@{
+    ListModel listModel = (ListModel)Model;
+    string root = Url.Content("~/");
+}
+
+@if (listModel.Posts.Count() > 0)
+{<section id="blog_post" class="index-2">
+  <div class="container">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <div class="row">
+    @foreach (var post in listModel.Posts)
+    {
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+
+                            <div class="item blog_card">
+                                <div class="post-img">
+                                    <img src="~/@post.Cover" alt="@post.Title">
+                                    <div class="posted_on"> <span class="date">@post.Published.Day</span> <span class="month">@post.Published.ToFriendlyShortDateString().Substring(0, 3)</span> </div>
+                                </div>
+                                <div class="post-detail">
+                                    
+                                        <h5>
+                                            <a  href="~/posts/@post.Slug">@post.Title</a>
+                                        </h5>
+                                    <div class="post-status">
+                                        <ul>
+                                            <li><i class="flat flaticon-folder"></i> <span><a href="javascript:void(0)">UI Developer</a></span></li>
+                                            <li><i class="flat flaticon-chat"></i> <span>20</span></li>
+                                            <li><i class="flat flaticon-chat"></i> <span>@post.Published.Year</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="description">
+                                        <p class="post-grid-desc">@Html.Raw(post.Description)</p>
+                                        <span>@post.Author.DisplayName</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                        </div>
+    }
+    </div>
+    </div>
+    </div>
+    </section>
+}
+else
+{
+    <div class="h1 text-capitalize">@_localizer["empty"]!</div>
+}
