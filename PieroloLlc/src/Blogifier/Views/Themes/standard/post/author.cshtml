@@ -3,7 +3,7 @@
     PostModel postModel = (PostModel)Model;
     var author = postModel.Post.Author;
 }
-<section class="post-author d-md-flex align-items-md-center text-center text-md-start">
+@*<section class="post-author d-md-flex align-items-md-center text-center text-md-start">
     <figure class="post-author-cover mb-3 mb-md-0">
         <img class="post-author-img" width="96" height="96" src="@author.Avatar" alt="@author.DisplayName" />
     </figure>
@@ -12,3 +12,26 @@
         <p class="post-author-bio">@author.Bio</p>
     </div>
 </section>
+*@
+
+<div class="author_sec">
+    <div class="author-pic"> <img src="@author.Avatar" alt="@author.DisplayName"> </div>
+    <div class="about-author">
+        <div class="name_designation">
+            <h5 class="post-author-name">@author.DisplayName</h5>
+           
+        </div>
+        <div class="social_media">
+            <ul>
+                <li><a href="javascript:void(0)" title="Facebook"><i class="flat flaticon-facebook-logo"></i></a></li>
+                <li><a href="javascript:void(0)" title="Twitter"><i class="flat flaticon-twitter"></i></a></li>
+                <li><a href="javascript:void(0)" title="Google"><i class="flat flaticon-google-plus-logo"></i></a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div class="description">
+            <p class="post-author-bio">@author.Bio</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
